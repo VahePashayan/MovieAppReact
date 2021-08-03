@@ -12,9 +12,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
   title: {
     flexGrow: 1,
     display: 'none',
@@ -50,7 +47,6 @@ const useStyles = makeStyles((theme) => ({
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create('width'),
     width: '100%',
@@ -69,16 +65,16 @@ export default function SearchAppBar() {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Toolbar>
-          <img src={logo} alt="logo" width={'70px'} />
-          <Typography className={classes.title} variant="h4" noWrap>
+        <Toolbar style={{backgroundColor: "#4d774e"}}>
+          <img src={logo} alt="logo" width={'5%'}/>
+          <Typography className={classes.title} variant="h3" style={{marginLeft: "3%", color: "#fddf82", fontWeight: "bolder"}} noWrap>
             Rotten Potatoes
           </Typography>
-          <div className={classes.search}>
+          <div className={classes.search} style={{marginRight: "5%", width: "20%"}} >
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
-            <InputBase
+            <InputBase 
               placeholder="Search…"
               classes={{
                 root: classes.inputRoot,
@@ -86,8 +82,10 @@ export default function SearchAppBar() {
               }}
               inputProps={{ 'aria-label': 'search' }}
             />
-            <Button color="inherit">Login</Button>
           </div>
+          <Button variant="contained" size="large" className={classes.margin} style={{color: "#164a41"}}>
+          Login
+        </Button>
         </Toolbar>
       </AppBar>
     </div>
