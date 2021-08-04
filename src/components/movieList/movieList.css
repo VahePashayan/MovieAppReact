@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 15px;
+}
+
+.movieContainer {
+    width: 300px;
+    align-items: center;
+    text-align: center;
+}
+
+.movieContainer img{
+    transition: 0.3s;
+}
+
+.movieContainer :hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.poster{
+    width: 100%;
+}
+
+.movieContainer h5 {
+    padding: 10px;
+    color: #ffffff;
+}
+
+.movieContainer h2 {
+    color: #fddf82
+}
