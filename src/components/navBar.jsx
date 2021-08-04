@@ -64,7 +64,7 @@ export default function SearchAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar style={{backgroundColor: "#4d774e"}}>
           <img src={logo} alt="logo" width={'5%'}/>
           <Typography className={classes.title} variant="h3" style={{marginLeft: "3%", color: "#fddf82", fontWeight: "bolder"}} noWrap>
