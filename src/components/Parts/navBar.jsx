@@ -6,7 +6,7 @@ import InputBase from '@material-ui/core/InputBase';
 import { alpha, makeStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import Button from '@material-ui/core/Button';
-import logo from '../Images/RottenPotatoesCut.png'
+import logo from './Images/RottenPotatoesCut.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function SearchAppBar() {
+export default function NavBar() {
   const classes = useStyles();
 
   return (

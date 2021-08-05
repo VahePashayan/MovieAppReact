@@ -17,6 +17,8 @@
     width: 300px;
     align-items: center;
     text-align: center;
+    border-width: 10px;
+    border-color: blue;
 }
 
 .movieContainer img{

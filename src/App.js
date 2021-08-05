@@ -1,11 +1,10 @@
 import './App.css';
-import MovieList from './components/movieList/movieList';
-import SearchAppBar from './components/navBar';
+import MainPage from './components/Pages/MainPage';
+
 
 function App() {
   return ( <div>
-  <SearchAppBar />
-  <MovieList />
+  <MainPage/>
   </div>
   )
 }
