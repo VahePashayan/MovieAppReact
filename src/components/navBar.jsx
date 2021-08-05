@@ -12,12 +12,18 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  navbar: {
+    backgroundColor: "#4d774e",
+  },
   title: {
     flexGrow: 1,
     display: 'none',
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
+    marginLeft: "3%",
+    color: "#fddf82",
+    fontWeight: "bolder"
   },
   search: {
     position: 'relative',
@@ -32,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: theme.spacing(1),
       width: 'auto',
     },
+    marginRight: "5%",
   },
   searchIcon: {
     padding: theme.spacing(0, 2),
@@ -57,6 +64,12 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
+  btn: {
+    '&:hover': {
+      backgroundColor: "#fddf82",
+      transition: "0.3s"
+    }
+  }
 }));
 
 export default function SearchAppBar() {
@@ -65,12 +78,12 @@ export default function SearchAppBar() {
   return (
     <div className={classes.root}>
       <AppBar position="fixed">
-        <Toolbar style={{backgroundColor: "#4d774e"}}>
+        <Toolbar className={classes.navbar}>
           <img src={logo} alt="logo" width={'5%'}/>
-          <Typography className={classes.title} variant="h3" style={{marginLeft: "3%", color: "#fddf82", fontWeight: "bolder"}} noWrap>
+          <Typography className={classes.title} variant="h3" noWrap>
             Rotten Potatoes
           </Typography>
-          <div className={classes.search} style={{marginRight: "5%", width: "20%"}} >
+          <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
@@ -83,7 +96,7 @@ export default function SearchAppBar() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>
-          <Button variant="contained" size="large" className={classes.margin} style={{color: "#164a41"}}>
+          <Button variant="contained" size="large" className={classes.btn}>
           Login
         </Button>
         </Toolbar>
