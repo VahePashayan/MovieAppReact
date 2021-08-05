@@ -1,23 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./movieList.css";
-import Pagination from "@material-ui/lab/Pagination";
-import { makeStyles } from "@material-ui/core/styles";
+import PaginationComp from "../PaginationComp";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-      marginTop: theme.spacing(2),
-      backgroundColor: "#4d774e",
-      display: 'flex',
-      justifyContent: 'center',
-    },
 
-}));
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
 
-  const classes = useStyles();
 
   useEffect(() => {
     async function getMovies() {
@@ -44,9 +34,7 @@ const MovieList = () => {
           </div>
         ))}
       </div>
-      <div className={classes.root}>
-        <Pagination count={500} className={classes.pageNum}/>
-      </div>
+      <PaginationComp />
     </div>
   );
 };
