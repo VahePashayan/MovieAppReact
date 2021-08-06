@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./movieList.css";
-import PaginationComp from "../PaginationComp";
 
 
 
@@ -20,7 +19,6 @@ const MovieList = () => {
   });
 
   return (
-    <div>
       <div className="container">
         {movies.map((el) => (
           <div className="movieContainer">
@@ -34,8 +32,6 @@ const MovieList = () => {
           </div>
         ))}
       </div>
-      <PaginationComp />
-    </div>
   );
 };
 

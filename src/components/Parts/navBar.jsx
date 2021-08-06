@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     },
     marginLeft: "3%",
     color: "#fddf82",
-    fontWeight: "bolder"
+    fontWeight: "bolder",
   },
   search: {
     position: 'relative',
@@ -67,7 +67,6 @@ const useStyles = makeStyles((theme) => ({
   btn: {
     '&:hover': {
       backgroundColor: "#fddf82",
-      transition: "0.3s"
     }
   }
 }));
