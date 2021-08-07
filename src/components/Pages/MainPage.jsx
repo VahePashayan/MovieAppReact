@@ -1,6 +1,6 @@
 import React from 'react';
-import MovieList from '../Parts/movieList/movieList';
-import NavBar from '../Parts/navBar';
+import MovieList from '../Parts/movieList/MovieList';
+import NavBar from '../Parts/NavBar';
 import PaginationComp from '../Parts/PaginationComp';
 
 

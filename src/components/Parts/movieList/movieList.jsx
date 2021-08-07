@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./movieList.css";
+import "./MovieList.css";
 
 
 
